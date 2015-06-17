@@ -22,3 +22,10 @@ function hideLastRow(){
   var rowToHide = lastAssociation.lastElementChild;
   rowToHide.style.display = "none";
 }
+
+function showLastRow(){
+  var associations = document.getElementsByClassName("association container");
+  var lastAssociation = associations[ associations.length - 1 ];
+  var rowToShow = lastAssociation.lastElementChild;
+  rowToShow.style.display = "block";
+}
