@@ -35,6 +35,24 @@ function disableOnClick(){
 }
 
 function hideSection(section){
-  rowToHide = section.parentElement.parentElement.parentElement;
+  var rowToHide = section.parentElement.parentElement.parentElement;
   rowToHide.style.display = "none";
+  //hides the columns but refreshing the page brings them back, no delete happens.
 }
+
+// WOOOOOW I googled it, got a box on the first webpage with this function inside
+// just stuck it in and it worked, plug and play to the extreame!!!
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
