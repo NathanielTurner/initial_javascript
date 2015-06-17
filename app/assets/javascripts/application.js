@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require d3
 //= require_tree .
-
 window.onload = hideLastRow;
 
 function hideLastRow(){
