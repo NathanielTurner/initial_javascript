@@ -29,3 +29,7 @@ function showLastRow(){
   var rowToShow = lastAssociation.lastElementChild;
   rowToShow.style.display = "block";
 }
+
+function disableOnClick(){
+  document.getElementById("submit_form").disabled = true;
+}
