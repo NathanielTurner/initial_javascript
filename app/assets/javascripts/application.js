@@ -33,3 +33,8 @@ function showLastRow(){
 function disableOnClick(){
   document.getElementById("submit_form").disabled = true;
 }
+
+function hideSection(section){
+  rowToHide = section.parentElement.parentElement.parentElement;
+  rowToHide.style.display = "none";
+}
